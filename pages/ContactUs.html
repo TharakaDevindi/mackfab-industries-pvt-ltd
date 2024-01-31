@@ -1,0 +1,212 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="../css/style.css" />
+<title>Contact Us</title>
+<script src="../js/myscripts.js"></script>
+<script src="../js/Search.js"></script>
+<script>
+function checkName()
+{
+var Name=document.getElementById("name").value;
+if((Name=="")||(Name==" "))
+{
+alert("Please enter your Name");
+return false;
+}
+else
+{
+return true;
+}
+}
+
+function checkEmail()
+{
+var e=document.getElementById("email").value;
+var at = e.indexOf('@');
+var dot = e.lastIndexOf('.');
+var d = dot-at;
+if((at>1)&&(d>1)&&(dot<e.length-1))
+{
+return true;
+}
+else
+{
+alert("Please check your E-Mail Address");
+return false;
+}
+}
+
+function checkSubj()
+{
+var subj=document.getElementById("sub").value;
+if((subj=="")||(subj==" "))
+{
+alert("Please enter your Subject");
+return false;
+}
+else
+{
+return true;
+}
+}
+
+function checkMsg()
+{
+var Msg=document.getElementById("msg").value;
+if((Msg=="")||(Msg==" "))
+{
+alert("Please Write something");
+return false;
+}
+else
+{
+return true;
+}
+}
+
+function validateMessage()
+{
+var Name = document.getElementById("name").value;
+window.event.returnValue = false;
+if(checkName()&&checkEmail()&&checkSubj()&&checkMsg())
+{
+alert(Name+" Your Message Has been Sent. \n\nThank you for getting in touch ! We appreciate you contacting us...");
+window.event.returnValue = true;
+}
+}
+
+
+</script>
+</head>
+
+<body>
+<div id="wrap">
+<div id="header">
+<div id="subheader">
+<div class="container">
+<p>INNOVATION & DELIVERING THE BEST FOOD EXPERIENCE TO THE MARKET...</p>
+<a href="https://www.facebook.com/Mackfab-2260555214273121/"><img src="../images/icon/fb3.jpg" alt></a><a href="Terms&Conditions.html">Terms & Condition</a><a href="Privacy_Policy.html">Privacy Policy</a>
+</div>
+</div>
+
+<!--== main header ==-->
+<div id="main-header">
+
+<!--Logo -->
+<div id="logo">
+<span id="ist">Mackfab</span>
+<span id="iist">Industries(PVT)LTD</span>
+</div>
+
+<!--Search Area -->
+<div id="search">
+<input class="search-area" type="text" name="txtSearch" placeholder="Search here" />
+<input class="search-btn" type="submit" name="submit" value="SEARCH" onclick="window.location.href='Products.html'" />
+</div>
+
+<!--== user-menu ==-->
+<div id="user-menu">
+<li><a href="#">Cart</a></li>
+<li><a href="Login.html">Login</a></li>
+</div>
+</div>
+
+<!--==== navigation bar ====-->
+<div id="navigation">
+<nav>
+<a href="Index.html">Home</a>
+<a href="AboutUs.html">About Us</a>
+<a href="ContactUs.html">Contact us</a>
+<a href="Category.html">Category</a>
+<a href="Products.html">Products</a>
+<a href="Blogs.html">Blog</a>
+</nav></div>
+<table width="1" cellspacing="1" >
+  <tr>
+    <td>&nbsp;</td>
+  </tr>
+</table>
+<h1 align="center">Contact Us</h1>
+<table width="1300" align="center" >
+  <tr>
+    <td>
+    <div class="contact_img">
+<img src="../images/map1.jpg" width="700px" height="560px"  />
+    </div>
+    </td>
+    <td><div class="contact_container">
+  <form >
+    <label for="name"> Name</label>
+    <input type="text" id="name" name="name" placeholder="Your name..">
+
+
+    <label for="email">Email Address</label>
+    <input type="text" id="email" name="email" placeholder="Your Email Address..">
+    
+    <label for="sub">Subject</label>
+    <input type="text" id="sub" name="sub" placeholder="Your Subject..">
+
+    <label for="msg">Message</label>
+    <textarea id="msg" name="msg" placeholder="Write something.." style="height:200px"></textarea>
+
+    <div class="contact_button">
+    <input type="submit" name="button3"  id="button3" value="Send"  onclick="validateMessage()" />
+    </div>
+  </form>
+</div>
+
+
+</td>
+
+  </tr>
+</table>
+
+
+<!--===== Footer =====-->
+<footer>
+<div class="container2">
+<div class="left-box">
+<h2>Mackfab Industries (PVT) LTD</h2>
+<div class="content">
+<p>Mackfab Industries (PVT) LTD is a newly established company which has a vision statement “Enrich lives through art of food processing” with a mission to make effective use of food by innovative food processing technologies and delivering the best food experience to the market.</p>
+<div class="social">
+<button onclick="window.location.href='https://www.facebook.com/Mackfab-2260555214273121/'" type="image" class="facebookButton"></button>
+<button onclick="window.location.href='file:///C:/Users/THARAKA%20DEVINDI/Desktop/Mackfab%20Industries%20(PVT)%20LTD/pages/index.html'" type="image" class="chromeButton"></button>
+<button onclick="window.location.href='file:///C:/Users/THARAKA%20DEVINDI/Desktop/Mackfab%20Industries%20(PVT)%20LTD/pages/index.html'" type="image" class="googleButton"></button>
+<button onclick="window.location.href='https://www.youtube.com/'" type="image" class="youtubeButton"></button>
+<button onclick="window.location.href='https://www.instagram.com/'" type="image" class="instagramButton"></button>
+<button onclick="window.location.href='https://twitter.com/explore'" type="image" class="twitterButton"></button>
+<button onclick="window.location.href='https://lk.linkedin.com/'" type="image" class="linkednButton"></button>
+<button onclick="window.location.href='https://www.daraz.lk/'" type="image" class="darazButton"></button>
+
+</div>
+</div>
+</div>
+</div>
+
+
+<div class="center-box">
+<h2>Address</h2>
+<div class="content">
+<div class="place">
+<button onclick="window.location.href='#'" type="image" class="locationButton"></button>
+<span class="text">248-3A, Temple Road, Thimbirigaskatuwa, Negombo</span>
+</div>
+<div class="phone">
+<button onclick="window.location.href='#'" type="image" class="phoneButton"></button>
+<span class="text">+94777861863</span>
+</div>
+<div class="website">
+<button onclick="window.location.href='#'" type="image" class="mailButton"></button>
+<span class="text">mackfabindustries@gmail.com </span>
+</div>
+</div>
+</div>
+
+</footer>
+
+</div>
+</body>
+</html>

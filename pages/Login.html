@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1" charset=utf-8>
+<link rel="stylesheet" type="text/css" href="../css/style.css" />
+<link rel="stylesheet" type="text/css" href="../css/LoginCss.css"  />
+<title>Login</title>
+<script src="../js/Login.js"></script>
+<script>
+function checkusername()
+{
+var username1 = document.getElementById("uname").value;
+if((username1=="")||(username1==" "))
+{
+alert("Please enter User Name!");
+return false;
+}
+else
+{
+return true;
+}
+}
+
+function checkpassword()
+{
+var pass = document.getElementById("psw").value;
+if((pass=="")||(pass==" "))
+{
+alert("Please enter Correct Password!");
+return false;
+}
+else
+{
+return true;
+}
+}
+
+
+function validatelogin()
+{
+var username1 = document.getElementById("uname").value;
+window.event.returnValue = false;
+if(checkusername()&&checkpassword())
+{
+alert("Welcome "+username1);
+window.event.returnValue = true;
+window.location = "index.html";
+}
+}
+</script>
+
+
+</head>
+
+<body>
+<div class="Imgcontainer">
+<img src="../images/LogHome.jpg" alt="Image" style="width:100%">
+<button class="Home-btn" onclick="window.location.href='Index.html'" style="width:auto;">Back to Home</button>
+<button class="login-btn" onclick="document.getElementById('id01').style.display='block' " style="width:auto;">Login</button>
+</div>
+<div id="id01" class="modal">
+  
+  <form class="modal-content animate">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <img src="../images/icon/Female-user-add-icon (1).png" alt="Avatar" class="avatar">
+    </div>
+
+    <div class="container">
+      <label for="uname"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="uname" id="uname" >
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" id="psw" >
+        
+      <button type="submit" onclick="validatelogin()">Login</button>
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+      </label>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+             <span class="psw">>>>>>>>>Haven't Account..SignUp <a href="SignUp.html">here</a></span>
+     
+
+    </div>
+  </form>
+</div>
+
+</body>
+</html>
